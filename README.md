@@ -1,22 +1,6 @@
 <div align="center">
   
   # 👋 欢迎来到 **zhiyusec 知御安全个人实验室**  
-
-<svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#00E5FF"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
-    </linearGradient>
-  </defs>
-  <path d="M30 110 C70 40,150 40,190 110 C150 180,70 180,30 110 Z" fill="none" stroke="url(#g3)" stroke-width="5" stroke-linecap="round"/>
-  <path d="M50 110 C80 60,140 60,170 110 C140 160,80 160,50 110 Z" fill="none" stroke="url(#g3)" stroke-width="3" stroke-dasharray="6 8" opacity="0.7"/>
-  <circle cx="110" cy="110" r="12" fill="url(#g3)"/>
-
-  <text x="50%" y="205" text-anchor="middle" font-size="22" font-family="Poppins, sans-serif" font-weight="600" fill="#7C3AED">
-    zhiyusec
-  </text>
-</svg>
   
   <img src="https://img.shields.io/badge/知御安全-守护数字未来-007BFF?style=for-the-badge&logo=github" alt="知御安全">
   <img src="https://img.shields.io/badge/AI_驱动-智能安全-F39C12?style=for-the-badge&logo=openaigym" alt="AI驱动">
