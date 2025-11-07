@@ -130,9 +130,6 @@
 | 🤖 **AI 智能决策层** | Omnibrain / Guardian / Agent / XMind         | AI策略中枢与多智能体引擎            | 调度下层任务、分析结果、自动生成安全策略与报告   |
 | 📊 **报告与可视化层**  | DocGuard / Archive / Portal                  | 生成可读性强的合规报告与管理面板         | 汇总全平台数据，展示企业安全全景视图        |
 
-```
-
-```
 ⚙️ 数据与智能流向（关键通路）
 
 资产层（Nexus） → 情报层（Orion） → AI层（Omnibrain）
