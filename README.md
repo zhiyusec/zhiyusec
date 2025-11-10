@@ -253,3 +253,6 @@
 ⭐ [欢迎 Star 我们的项目](https://github.com/zhiyusec/zhiyusec) · 🤝 [加入智能安全新纪元](https://www.zhiyusec.com)
 
 </div>
+
+## 📄 版权声明
+License: [MIT](./License) © zhiyusec Team
