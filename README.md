@@ -254,5 +254,6 @@
 
 </div>
 
-## 📄 版权声明
-License: [MIT](./License) © zhiyusec Team
+## 📄 版权声明 (./License)
+License: Proprietary © zhiyusec (HaoQing.Chen)
+All rights reserved. Unauthorized use is prohibited.
