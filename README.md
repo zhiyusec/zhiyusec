@@ -247,7 +247,7 @@
 
 ### 🚀 让我们一起探索代码与智能安全的无限边界
 
-**知御安全个人实验室 Zhiyu Security Lab** © 2025  
+**知御安全个人实验室 zhiyusec ** © 2025  
 **先知 · 先御 · 智御未来**
 
 ⭐ [欢迎 Star 我们的项目](https://github.com/zhiyusec/zhiyusec) · 🤝 [加入智能安全新纪元](https://www.zhiyusec.com)
