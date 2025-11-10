@@ -3,7 +3,7 @@
   # 👋 欢迎来到 **zhiyusec 知御安全个人实验室**  
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/zhiyusec/zhiyusec/main/logo.svg" width="160" alt="ZhiyuSec Logo">
+    <img src="https://raw.githubusercontent.com/zhiyusec/zhiyusec/main/logo.svg" width="160" alt="zhiyusec Logo">
   </p>
   
   <img src="https://img.shields.io/badge/知御安全-守护数字未来-007BFF?style=for-the-badge&logo=github" alt="知御安全">
@@ -42,7 +42,7 @@
 
 ---
 
-## 🚀 ZhiyuSec 产品矩阵 Zhiyu Security Suite
+## 🚀 zhiyusec 产品矩阵 Zhiyu Security Suite
 
 <div align="center">
 
@@ -60,7 +60,7 @@
 
 
 ---
-🧬 ZhiyuSec AI 系列 · 智能驱动安全未来
+🧬 zhiyusec AI 系列 · 智能驱动安全未来
 | 模块               | 中文名  | 英文名                   | 应用方向               | 技术特色                  |
 | :--------------- | :---- | :--------------------- | :----------------- | :-------------------- |
 | 🤖 **AI 安全助手**   | 知御·智安 | **zhiyusec-guardian**  | 安全问答 / 审计辅助 / 报告生成 | LLM多智能体 / 自动推理 / 知识增强 |
@@ -70,7 +70,7 @@
 
 ---
 
-🧩 ZhiyuSec 扩展生态
+🧩 zhiyusec 扩展生态
 | 模块             | 中文名  | 英文名                  | 定位             | 特点                          |
 | :------------- | :---- | :-------------------- | :------------- | :-------------------------- |
 | ☁️ **安全云平台**   | 知御·云盾 | **zhiyusec-cloud**    | 云端一体化安全管理平台    | SaaS部署 / 云原生安全管理            |
@@ -83,14 +83,14 @@
 
 ---
 
-## 🧬 ZhiyuSec 三层架构图
+## 🧬 zhiyusec 三层架构图
 
 
 ## 🏗️ 系统架构概览（智能安全一体化联动）
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────┐
-│ 🌐 知御安全 ZhiyuSec 平台架构总览                                             │
+│ 🌐 知御安全 zhiyusec 平台架构总览                                             │
 │ 统一调度 · 智能驱动 · 自动防御 · 数据闭环                                     │
 └──────────────────────────────────────────────────────────────────────────────┘
 
@@ -154,7 +154,7 @@
 ```
 ---
 
-## 💡 技术专长与研究方向 ZhiyuSec Research Domains
+## 💡 技术专长与研究方向 zhiyusec Research Domains
 
 ### 🧠 **AI 与大语言模型**
 - 大规模 LLM 训练与推理优化  
