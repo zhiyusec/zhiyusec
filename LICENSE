@@ -1,20 +1,18 @@
-# 个人README模板版权声明
+Copyright (c) 2025 zhiyusec (HaoQing.Chen)
+All rights reserved.
 
-版权所有 © 2025 haoqing.chen (zhiyusec)
+This software, including all source code, documentation, examples, and related materials (the "Software"),
+is the proprietary property of zhiyusec (HaoQing.Chen).
 
-1. **版权归属**：本README模板由haoqing.chen (GitHub: @zhiyusec)创建和设计，版权归作者所有。
+No part of the Software may be copied, modified, distributed, transmitted, published, sublicensed,
+or used in any form, for any purpose, commercial or personal, without the express prior written permission
+of the copyright owner.
 
-2. **署名要求**：如果您使用、修改或分发此模板，必须保留以下署名信息在您的README中的明显位置：
-   ```
-   模板设计灵感来源：© haoqing.chen (https://github.com/zhiyusec)
-   ```
+The Software is provided "as is" without warranty of any kind, either express or implied,
+including but not limited to the warranties of merchantability, fitness for a particular purpose,
+or non-infringement. In no event shall the copyright owner be liable for any claim, damages,
+or other liability, whether in an action of contract, tort, or otherwise, arising from,
+out of, or in connection with the Software or the use or other dealings in the Software.
 
-3. **禁止商业使用**：未经明确书面许可，不得将此模板用于商业目的。
-
-4. **修改限制**：允许个人使用时修改此模板以适应个人需求，但必须保留原作者署名。
-
-5. **责任限制**：作者不对使用此模板产生的任何后果负责。
-
-6. **保留权利**：未在此明确授予的所有权利均由作者保留。
-
-如需特殊使用许可，请联系：hq3245299537@gmail.com
+For licensing inquiries, business cooperation, or authorization requests, please contact:
+HaoQing.Chen <hq3245299537@gmail.com>
