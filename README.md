@@ -42,7 +42,7 @@
 
 ---
 
-## 🚀 zhiyusec 产品矩阵 Zhiyu Security Suite
+## 🚀 zhiyusec 产品矩阵
 
 <div align="center">
 
