@@ -1,0 +1,196 @@
+# 知御安全 - 自定义检测规则
+
+version: "1.0.0"
+
+rules:
+  # ===== 中国特定敏感信息规则 =====
+
+  # 车牌号
+  - id: "cn-license-plate"
+    description: "检测中国车牌号"
+    type: "pii"
+    pattern: '[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领][A-HJ-NP-Z][A-HJ-NP-Z0-9]{4,5}[A-HJ-NP-Z0-9挂学警港澳]'
+    severity: "medium"
+    tags: ["pii", "vehicle", "china"]
+    enabled: true
+
+  # VIN 车辆识别代码
+  - id: "vehicle-vin"
+    description: "检测车辆识别代码 VIN"
+    type: "pii"
+    pattern: '[A-HJ-NPR-Z0-9]{17}'
+    severity: "medium"
+    tags: ["pii", "vehicle", "vin"]
+    enabled: true
+    entropy_threshold: 3.5
+
+  # 合同编号
+  - id: "contract-number"
+    description: "检测合同编号"
+    type: "business"
+    pattern: '(?i)(合同号|合同编号|contract[_-]?no)[：:]*\s*[A-Z0-9\-]{6,20}'
+    severity: "low"
+    tags: ["business", "contract"]
+    enabled: true
+
+  # 银行卡号
+  - id: "cn-bank-card"
+    description: "检测银行卡号"
+    type: "financial"
+    pattern: '[0-9]{16,19}'
+    severity: "high"
+    tags: ["pii", "financial", "bank-card"]
+    enabled: true
+    entropy_threshold: 2.0
+
+  # 护照号码
+  - id: "cn-passport"
+    description: "检测中国护照号码"
+    type: "pii"
+    pattern: '[EG][0-9]{8}'
+    severity: "high"
+    tags: ["pii", "passport", "china"]
+    enabled: true
+
+  # 军官证
+  - id: "cn-military-id"
+    description: "检测军官证号"
+    type: "pii"
+    pattern: '军字第[0-9]{7,10}号'
+    severity: "high"
+    tags: ["pii", "military", "china"]
+    enabled: true
+
+  # ===== 企业敏感信息规则 =====
+
+  # 阿里云 AccessKey
+  - id: "aliyun-access-key"
+    description: "检测阿里云 AccessKey"
+    type: "api_key"
+    pattern: 'LTAI[a-zA-Z0-9]{12,20}'
+    severity: "critical"
+    tags: ["aliyun", "cloud", "access-key"]
+    enabled: true
+
+  # 腾讯云 SecretId
+  - id: "tencent-cloud-secret-id"
+    description: "检测腾讯云 SecretId"
+    type: "api_key"
+    pattern: 'AKID[a-zA-Z0-9]{32,48}'
+    severity: "critical"
+    tags: ["tencent", "cloud", "secret-id"]
+    enabled: true
+
+  # 微信小程序 AppSecret
+  - id: "wechat-app-secret"
+    description: "检测微信小程序 AppSecret"
+    type: "api_key"
+    pattern: '[a-f0-9]{32}'
+    severity: "high"
+    tags: ["wechat", "app-secret", "mini-program"]
+    enabled: true
+    entropy_threshold: 3.5
+
+  # 钉钉 Webhook
+  - id: "dingtalk-webhook"
+    description: "检测钉钉 Webhook 地址"
+    type: "webhook"
+    pattern: 'https://oapi\.dingtalk\.com/robot/send\?access_token=[a-zA-Z0-9]{64}'
+    severity: "medium"
+    tags: ["dingtalk", "webhook"]
+    enabled: true
+
+  # 企业微信 Webhook
+  - id: "wework-webhook"
+    description: "检测企业微信 Webhook"
+    type: "webhook"
+    pattern: 'https://qyapi\.weixin\.qq\.com/cgi-bin/webhook/send\?key=[a-zA-Z0-9\-]{36}'
+    severity: "medium"
+    tags: ["wework", "webhook", "wechat"]
+    enabled: true
+
+  # ===== 数据库连接字符串 =====
+
+  # MySQL 连接字符串
+  - id: "mysql-connection-string"
+    description: "检测 MySQL 数据库连接字符串"
+    type: "database_url"
+    pattern: 'mysql://[^\s@]+:[^\s@]+@[^\s/]+/[^\s]+'
+    severity: "critical"
+    tags: ["mysql", "database", "connection-string"]
+    enabled: true
+
+  # PostgreSQL 连接字符串
+  - id: "postgresql-connection-string"
+    description: "检测 PostgreSQL 数据库连接字符串"
+    type: "database_url"
+    pattern: 'postgresql://[^\s@]+:[^\s@]+@[^\s/]+/[^\s]+'
+    severity: "critical"
+    tags: ["postgresql", "database", "connection-string"]
+    enabled: true
+
+  # MongoDB 连接字符串
+  - id: "mongodb-connection-string"
+    description: "检测 MongoDB 数据库连接字符串"
+    type: "database_url"
+    pattern: 'mongodb(\+srv)?://[^\s@]+:[^\s@]+@[^\s/]+'
+    severity: "critical"
+    tags: ["mongodb", "database", "connection-string"]
+    enabled: true
+
+  # ===== 其他敏感信息 =====
+
+  # SSH 私钥
+  - id: "ssh-private-key"
+    description: "检测 SSH 私钥"
+    type: "private_key"
+    pattern: '-----BEGIN (RSA|DSA|EC|OPENSSH) PRIVATE KEY-----'
+    severity: "critical"
+    tags: ["ssh", "private-key", "certificate"]
+    enabled: true
+
+  # 环境变量中的密码
+  - id: "env-password"
+    description: "检测环境变量中的密码"
+    type: "password"
+    pattern: '(?i)(password|passwd|pwd|secret)[=:]\s*[''"]?[^\s''"]{8,}[''"]?'
+    severity: "high"
+    tags: ["password", "environment", "credential"]
+    enabled: true
+    entropy_threshold: 3.0
+
+  # Docker 配置认证信息
+  - id: "docker-auth"
+    description: "检测 Docker 配置中的认证信息"
+    type: "credential"
+    pattern: '(?i)"auth"\s*:\s*"[A-Za-z0-9+/=]{20,}"'
+    severity: "high"
+    tags: ["docker", "auth", "credential"]
+    enabled: true
+
+  # Kubernetes Secret
+  - id: "k8s-secret"
+    description: "检测 Kubernetes Secret"
+    type: "credential"
+    pattern: '(?i)kind:\s*Secret'
+    severity: "medium"
+    tags: ["kubernetes", "k8s", "secret"]
+    enabled: true
+
+  # NPM Token
+  - id: "npm-token"
+    description: "检测 NPM Token"
+    type: "token"
+    pattern: 'npm_[a-zA-Z0-9]{36}'
+    severity: "high"
+    tags: ["npm", "token", "package-manager"]
+    enabled: true
+
+  # PyPI Token
+  - id: "pypi-token"
+    description: "检测 PyPI Token"
+    type: "token"
+    pattern: 'pypi-[A-Za-z0-9\-_]{32,}'
+    severity: "high"
+    tags: ["pypi", "token", "package-manager"]
+    enabled: true

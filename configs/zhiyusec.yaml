@@ -1,0 +1,111 @@
+# 知御安全 - 敏感信息扫描配置文件
+
+# 扫描配置
+scan:
+  # 扫描路径列表
+  paths:
+    - "."
+
+  # 最大文件大小（字节），默认 100MB
+  max_file_size: 104857600
+
+  # 是否扫描归档文件
+  scan_archives: true
+
+  # 是否跟随符号链接
+  follow_symlinks: false
+
+  # 黑名单路径（正则表达式）
+  blacklist:
+    - "node_modules"
+    - "\\.git"
+    - "\\.vscode"
+    - "\\.idea"
+    - "vendor"
+    - "dist"
+    - "build"
+    - "\\.min\\.js$"
+    - "\\.min\\.css$"
+
+  # 白名单路径（正则表达式，留空表示扫描所有）
+  whitelist: []
+
+  # 断点续扫文件路径
+  checkpoint_file: ".zhiyusec-checkpoint"
+
+  # 是否启用断点续扫
+  enable_checkpoint: false
+
+# 检测配置
+detect:
+  # 规则文件路径列表
+  rule_files:
+    - "configs/rules.yaml"
+
+  # 是否启用内置规则
+  enable_builtin_rules: true
+
+  # 熵值阈值（0-8），用于判断随机字符串
+  entropy_threshold: 4.5
+
+  # 是否启用熵值检测
+  enable_entropy_check: true
+
+  # 是否启用弱加密检测
+  enable_crypto_check: true
+
+  # 自定义关键词列表
+  custom_keywords:
+    - "password"
+    - "secret"
+    - "token"
+    - "api_key"
+
+  # 启用的敏感信息类型
+  enabled_types:
+    api_key: true
+    password: true
+    private_key: true
+    token: true
+    certificate: true
+    database_url: true
+    email: true
+    phone: true
+    id_card: true
+    ip_address: false
+
+# 报告配置
+report:
+  # 输出格式：json, sarif, csv, html
+  formats:
+    - "json"
+    - "html"
+
+  # 输出目录
+  output_dir: "reports"
+
+  # 输出文件名前缀
+  file_prefix: "zhiyusec-scan"
+
+  # 是否包含超大文件列表
+  include_large_files: true
+
+  # 最小严重性级别：low, medium, high, critical
+  min_severity: "low"
+
+  # 是否显示详细信息
+  verbose: false
+
+# 性能配置
+performance:
+  # 最大并发扫描任务数
+  max_concurrency: 10
+
+  # 文件读取缓冲区大小（字节）
+  buffer_size: 4096
+
+  # 扫描超时时间（秒）
+  scan_timeout: 7200
+
+  # 是否启用进度条
+  show_progress: true
